@@ -1,0 +1,35 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Testing</title>
+</head>
+<body>
+
+  <label>Search Filter:</label>
+  <input type="text" ng-model='searchFilter'>
+
+  <table>
+    <thead>
+      <tr>
+        <th ng-click='changOrder("brand")'>Brand</th>
+        <th ng-click='changOrder("Size")'>Size</th>
+        <th ng-click='changOrder("Type")'>Type</th>
+      </tr>
+    </thead>
+      <thead>
+        <tr ng-repeat='shoes| filter : searchFilter
+                            |orderBy  '>
+          <td>{{shoe.brand}}</td>
+          <td>{{shoe.size}}</td>
+          <td>{{shoe.type}}</td>
+        </tr>
+      </thead>
+  </table>
+
+
+
+
+
+
+</body>
+</html>

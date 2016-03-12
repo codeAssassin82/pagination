@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Testing</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href='style.css'></>
+
+</head>
+  <body ng-app='testApp'>
+    <h1>Testing!</h1>
+
+    <label>Search Filter:</label>
+    <input type="text" ng-model='searchFilter'>
+
+    <table>
+      <thead>
+        <tr>
+          <th ng-click='changOrder("brand")'>Brand</th>
+          <th ng-click='changOrder("Size")'>Size</th>
+          <th ng-click='changOrder("Type")'>Type</th>
+        </tr>
+      </thead>
+        <thead>
+          <tr ng-repeat='shoes| filter : searchFilter
+                            |orderBy  '>
+            <td>{{shoe.brand}}</td>
+            <td>{{shoe.size}}</td>
+            <td>{{shoe.type}}</td>
+          </tr>
+        </thead>
+    </table>
+
+</body>
+</html>

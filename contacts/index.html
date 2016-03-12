@@ -1,0 +1,50 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact List </title>
+  <title>Angular</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href='style.css'></>
+
+</head>
+<body ng-app="myApp" ng-controller='mainCtrl'>
+  <div class='container '>
+    <h1>CONTACT LIST</h1>
+    <label for="Enter"></label>
+    <input type="text" ng-model='contact.name'>
+    <input type="text" ng-model='contact.phone'>
+    <input type="text" ng-model='contact.email'>
+    <button ng-click='addContact()'>Add Contact</button>
+    <table class='table'>
+      <thead>
+        <th>Name</th>
+        <th>phone</th>
+        <th>email</th>
+      </thead>
+        <tbody>
+          <tr id='template' ng-repeat='contact in contacts track by $index'>
+            <td>{{contact.name}}</td>
+            <td>{{contact.phone}}</td>
+            <td>{{contact.email}}</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

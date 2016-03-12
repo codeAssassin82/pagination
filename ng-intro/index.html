@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<title>Angular</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+	<script src="main.js"></script>
+
+</head>
+<body ng-app='myApp' ng-controller='mainCtrl'>
+<div class='container'>
+<h1>Angular!</h1>
+<label for="">New Name: </label>
+<input type='text' ng-model='newName'>
+
+<button ng-click='addName()'>Add Name</button>
+
+
+<ul>
+	<li ng-repeat='name in names track by $index'>
+	{{name}}
+	</li>
+</ul>
+
+<hr>
+<input type="text" placeholder="Things to Do"  ng-model='newTodo.desc'>
+<input type="Date" ng-model='newTodo.date'>
+<button class='btn btn-success' ng-click='addTask()'>Add Todo</button>
+
+<table class='table'>
+	<thead>
+		<tr>
+			<th>Description</th>
+			<th>Due Date</th>
+			<th>Is Complete?</th>
+      <th>Delete</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat ='todo in todos track by $index'>
+			<td>{{todo.desc}}</td>
+			<td>{{todo.date | date}}</td>
+			<td>
+			<input type="checkbox" ng-model='todo.complete'>
+			</td>
+      <td>
+        <button ng-click='deleteTodo(todo)'type="button" class="btn btn-danger btn-sm">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </td>
+		</tr>
+	</tbody>
+
+</table>
+  <hr>
+  <button class='btn btn-success btn-lg' ng-click='getWeather()'>get weather</button>
+<!-- <input type="number" ng-model='money'> -->
+<!--
+<div>
+Money: {{money | currency}}
+</div>
+ -->
+</div>
+</body>
+</html>

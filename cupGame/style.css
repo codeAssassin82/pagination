@@ -1,0 +1,35 @@
+
+
+div > div {
+  background-color: blue;
+}
+
+
+div {
+  background-color: white;
+}
+
+
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: : blue;
+}
+
+#rectangle  {
+  float: left;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.box {
+  border-color: blue;
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  display: inline-block;
+  background-color: red;
+}

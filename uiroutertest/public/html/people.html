@@ -1,0 +1,18 @@
+<h1>people</h1>
+
+
+
+<button ng-click='test()'>Search</button>
+<ul>
+  <li ui-sref='about({url: person.url})' ng-click='getPeople(person)' ng-repeat='person in people'>{{person.name}}</li>
+</ul>
+
+<ul class="pagination pagination-sm">
+  <li class="disabled"><a href="#">&laquo;</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li ng-click='page(1)'><a href="#">2</a></li>
+  <li ng-click='page(2)'><a href="#">3</a></li>
+  <li ng-click='page(3)'><a href="#">4</a></li>
+  <li ng-click='page(4)'><a href="#">5</a></li>
+  <li ng-click='page(5)'><a href="#">&raquo;</a></li>
+</ul>

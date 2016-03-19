@@ -1,0 +1,65 @@
+#pushUp{
+  margin-top: 0px;
+  margin-left: 44%;
+  margin-bottom: 10px;
+  opacity: 0;
+
+}
+
+p{
+  margin-top: 20px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+/*div{
+  margin-top: -120px;
+}*/
+
+h6{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+/*.btn{
+ margin-left: 46% ;
+  margin-top: 8px;
+  opacity: 0.4;
+}*/
+
+
+video#bgvid{
+  position: fixed;
+	min-width:100%;
+	min-height:100%;
+	width:auto;
+	height:auto;
+	background-size:cover;
+	 -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  z-index: -1;
+
+}
+
+a{
+   color: white;
+   text-decoration: none;
+   font-size: 20px;
+}
+center{
+   color: red;
+   text-decoration: none;
+   font-size: 30px;
+}
+.modal-body{
+  style=text-align:center;
+}
+h1 {
+  color: red;
+}
+h3 {
+  color: green;
+}

@@ -1,0 +1,48 @@
+<center>
+
+<input type="text" ng-model='newData.destination' placeholder="State">
+<input type="text" ng-model='newData.location' placeholder="City">
+<input type="text" ng-model='newData.info' placeholder="Info">
+  <a href="#" class="btn btn-success" ng-click='post()'>Post!</a>
+</center>
+
+
+<center>List</center>
+<hr>
+<div class='container' ng-repeat='list in lists'>
+  <p >{{list.destination}}</p>
+  <p>{{list.location}}</p>
+  <a ng-click='edit(list)' href="#" class="btn btn-info" data-toggle='modal' data-target='#myModal'>Update</a>
+  <a ng-click='delete(list)' href="#" class="btn btn-danger">Delete</a>
+</div>
+
+<div class="container">
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Edit Information</h4>
+              </div>
+            <div class="modal-body">
+              <label for="destination">Destination</label>
+              <input type="text" placeholder="Destination" ng-model='editTravel.destination'>
+              <br>
+              <label for="Location">Location:</label>
+              <input type="text" placeholder="Location" ng-model='editTravel.location'>
+              <br>
+              <label for="Info">Info:</label>
+              <input type="text" placeholder="Info" ng-model='editTravel.info'>
+            </div>
+          <div class="modal-footer">
+            <button ng-click='confirm(editTravel)' class='confirm btn btn-success' data-dismiss="modal">
+              <i class="fa fa-check"></i>
+            </button>
+            <button ng-click='cancelEdit()' class='cancel btn btn-danger' data-dismiss="modal">
+              <i class="fa fa-times fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

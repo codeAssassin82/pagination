@@ -1,0 +1,6 @@
+<h1>Destination</h1>
+
+<input ng-model='searchText' class='center-align' placeholder='Search'>
+<h3 ng-click='click(list)' ui-sref="destination" ng-repeat='des in destination | filter : searchText'>
+{{des.destination}}
+</h3>
